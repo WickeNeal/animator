@@ -22,7 +22,3 @@ Optional, for word-timed voice-overs: `pip install faster-whisper`.
 ## Use
 
 In Claude Code: `/animator`, or ask for an animation, e.g. "make a 10s hero animation for our landing page".
-
-## Credits
-
-Forked from a friend's `animate` skill and extended: purpose-first intake, product tours, a web app capture kit, and web deliverables.
