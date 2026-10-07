@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reel starter</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1714; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  REEL STARTER — 9:16, 8.0s @ 120 BPM, 24fps. Two parts in two styles: parts/ink (crosshatch), then parts/paper (cut paper).
+//  Make the parts: copy a style's demo (piece.json + src/) into parts/<name>/, set its DURATION to this reel's,
+//  and draw its eras at REEL seconds (parts share this clock). Build this folder: build.mjs builds every part first.
+//  kit/reel.js draws whichever part REEL names, and the links between them: a hard cut or an iris.
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const DURATION = 8.0;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive';
+const CX = 470;
+const ANCHOR = [500, 1000];   // the hero's screen spot at every link: each part draws its hero there at its first and last frame
+
+// [t0, part, link]: link absent = a hard cut; { iris: [x, y], d, r0 } = the new part opens as a circle from (x, y)
+const REEL = [
+  [0.0, 'ink'],                                     // crosshatch: the desk, its own morph at 3.0
+  [4.0, 'paper', { iris: [540, 1270], d: 0.5, r0: 90 }],  // cut paper opens out of the ink hero: the garden
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'reel',
+  shots: REEL.map(([t0, part], i) => ({ id: i + 1, key: part + '-' + i, part, t0, t1: i + 1 < REEL.length ? REEL[i + 1][0] : DURATION, title: part })),
+  cuts: REEL.slice(1).filter(([, , l]) => !l).map(([t0]) => t0),
+  morphs: REEL.slice(1).filter(([, , l]) => l && l.iris).map(([t0]) => t0),
+  cues: { iris: 4.0 },
+  acts: [],
+  board: [{ t: 2.0, title: 'part one', sound: 'a pad', next: 'iris' }, { t: 6.0, title: 'part two', sound: 'the bass', next: 'loops' }],
+  narration: [],
+};
+window.TIMELINE = TIMELINE;

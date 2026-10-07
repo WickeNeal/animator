@@ -1,0 +1,9 @@
+{
+  "name": "animator",
+  "private": true,
+  "description": "A Claude Code skill: procedural canvas animations rendered to video",
+  "type": "module",
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

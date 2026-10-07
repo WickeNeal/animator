@@ -1,0 +1,30 @@
+{
+  "name": "product-tour",
+  "title": "Product tour",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "bpm": 120,
+    "duration": 22.0,
+    "frames": 528
+  },
+  "formats": [
+    "16:9"
+  ],
+  "storyFormat": "F5 fixed-hero journey (crossfades on the 120 BPM grid inside a fixed window)",
+  "style": "isometric",
+  "review": {
+    "safe": {
+      "top": 60,
+      "bottom": 60,
+      "right": 60
+    },
+    "refs": {}
+  },
+  "scenes": [
+    "src/boxes.js",
+    "src/engine.js",
+    "src/scenes.js"
+  ]
+}
