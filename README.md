@@ -21,10 +21,9 @@ It asks what the animation is for first, then the style and the details, and che
 <td align="center" valign="top" width="25%"><img src="styles/math/sample.png" width="180" alt="Math style sample"><br><b>Math</b><br><sub>Manim-style: black stage, axes, graphs, colour-coded variables</sub></td>
 <td align="center" valign="top" width="25%"><img src="styles/isometric/sample.png" width="180" alt="Isometric style sample"><br><b>Isometric</b><br><sub>Product line art: hairlines, white faces, one dark accent</sub></td>
 <td align="center" valign="top" width="25%"><img src="styles/pixel/sample.png" width="180" alt="Pixel art style sample"><br><b>Pixel art</b><br><sub>Low-res eras, drawn at true resolution and upscaled</sub></td>
+<td align="center" valign="top" width="25%"><img src="docs/custom.png" width="180" alt="Custom style tile"><br><b>Custom</b><br><sub>Your own look from a video, stills or a web page, saved as a new style</sub></td>
 </tr>
 </table>
-
-Or a **custom** look: show it a video, stills or a web page and it measures the style, matches frames with you and saves it as a new style.
 
 ## Product tours
 
