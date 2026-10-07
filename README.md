@@ -8,6 +8,30 @@ It asks what the animation is for first, then the style and the details, and che
 - **Product tours:** a walkthrough of a real web app. It captures real screenshots, zooms from component to button, adds spotlights, callouts and a cursor that follows your click path, and crossfades between pages.
 - **Sound:** a synthesized score on a 120 BPM grid, your own track, or a voice-over.
 
+## Styles
+
+<table>
+<tr>
+<td align="center" valign="top" width="25%"><img src="styles/cut-paper/sample.png" width="180" alt="Cut paper style sample"><br><b>Cut paper</b><br><sub>Torn paper, drop shadows, crayon, characters with faces</sub></td>
+<td align="center" valign="top" width="25%"><img src="styles/crosshatch/sample.png" width="180" alt="Crosshatch ink style sample"><br><b>Crosshatch ink</b><br><sub>Sketchy ink that boils, hatch and pencil shading</sub></td>
+<td align="center" valign="top" width="25%"><img src="styles/riso/sample.png" width="180" alt="Riso print style sample"><br><b>Riso print</b><br><sub>Three-ink risograph: halftones, overprints, misregistration</sub></td>
+<td align="center" valign="top" width="25%"><img src="styles/sketchbook/sample.png" width="180" alt="Sketchbook style sample"><br><b>Sketchbook</b><br><sub>Graphite and one accent colour, hand lettering</sub></td>
+</tr>
+<tr>
+<td align="center" valign="top" width="25%"><img src="styles/math/sample.png" width="180" alt="Math style sample"><br><b>Math</b><br><sub>Manim-style: black stage, axes, graphs, colour-coded variables</sub></td>
+<td align="center" valign="top" width="25%"><img src="styles/isometric/sample.png" width="180" alt="Isometric style sample"><br><b>Isometric</b><br><sub>Product line art: hairlines, white faces, one dark accent</sub></td>
+<td align="center" valign="top" width="25%"><img src="styles/pixel/sample.png" width="180" alt="Pixel art style sample"><br><b>Pixel art</b><br><sub>Low-res eras, drawn at true resolution and upscaled</sub></td>
+</tr>
+</table>
+
+Or a **custom** look: show it a video, stills or a web page and it measures the style, matches frames with you and saves it as a new style.
+
+## Product tours
+
+<img src="docs/product-tour.png" width="720" alt="Product tour: a real app screen in a window, a feature spotlit with a callout, the cursor and the cube-bot hero">
+
+A walkthrough of a real web app: real screenshots, zooms from component to button, spotlights, callouts, and a cursor that follows your click path.
+
 ## Install
 
 Needs Node 18+, ffmpeg (`brew install ffmpeg`) and Claude Code.
